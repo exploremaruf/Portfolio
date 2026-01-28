@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maruf Hasan | Android Developer</title>
+    <title>Maruf Hasan | Developer Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -21,66 +21,65 @@
     </nav>
 
     <section id="home" class="hero">
+        <div class="profile-img-container">
+            <img src="./asset/maruf.jpeg" alt="Maruf Hasan" class="profile-img">
+        </div>
         <div class="status-badge">Available for Work</div>
         <h1>Hi, I'm <span class="gradient-text">Maruf Hasan</span></h1>
-        <p>A passionate <strong>Android Developer</strong> from Bangladesh. Building seamless mobile experiences with Java and modern UI patterns.</p>
+        <h2 class="typing-container">I am a <span id="type-text"></span><span class="cursor">|</span></h2>
+        
+        <p>Currently focusing on <strong>Android Development</strong> and building web solutions with <strong>Django</strong>.</p>
+        
         <div class="hero-btns">
-            <a href="#projects" class="btn-primary">View My Work</a>
-            <a href="#contact" class="btn-secondary">Contact Me</a>
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="mailto:maruf.chats@gmail.com" class="btn-secondary">Hire Me</a>
         </div>
     </section>
 
-    <div class="skills-container">
-        <div class="skill-card">
-            <i class="fa-brands fa-android"></i>
-            <h3>Android</h3>
-            <p>Primary Skill</p>
-        </div>
-        <div class="skill-card">
-            <i class="fa-brands fa-java"></i>
-            <h3>Java</h3>
-            <p>Core Language</p>
-        </div>
-        <div class="skill-card">
-            <i class="fa-solid fa-code"></i>
-            <h3>VS Code</h3>
-            <p>Secondary Tool</p>
-        </div>
-        <div class="skill-card">
-            <i class="fa-brands fa-git-alt"></i>
-            <h3>Git</h3>
-            <p>Version Control</p>
-        </div>
-    </div>
-
     <section id="projects" class="projects">
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title">My Projects</h2>
         <div class="project-grid">
+            
             <div class="project-card">
-                <div class="project-img">
-                    <i class="fa-brands fa-android"></i>
-                </div>
+                <div class="project-icon"><i class="fa-solid fa-map-location-dot"></i></div>
                 <div class="project-info">
-                    <h3>Modern Task App</h3>
-                    <p>A native android application built with Java and Firebase.</p>
-                    <div class="tags">
-                        <span>Java</span>
-                        <span>Firebase</span>
-                    </div>
+                    <h3>Bhumi</h3>
+                    <p>A land measurement mobile app for accurate area calculation using map-based digital measurement.</p>
+                    <div class="tags"><span>Android</span><span>Java</span><span>Maps API</span></div>
                 </div>
             </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fa-brands fa-youtube"></i></div>
+                <div class="project-info">
+                    <h3>TechTube</h3>
+                    <h4 style="color:var(--primary); font-size: 0.8rem; margin-bottom: 5px;">YouTube Clone Concept</h4>
+                    <p>An Android app that loads videos from a server via URL and features a custom video player logic.</p>
+                    <div class="tags"><span>Android Studio</span><span>Java</span><span>Video Player</span></div>
+                </div>
             </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fa-solid fa-book-atlas"></i></div>
+                <div class="project-info">
+                    <h3>Plexus-Web</h3>
+                    <p>A modern Library Management System (LMS) built with Django. Manages inventory, borrowing, and fines.</p>
+                    <div class="tags"><span>Python</span><span>Django</span><span>Bootstrap</span></div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <footer id="contact">
-        <h2>Let's Work Together</h2>
-        <p>Got a project in mind? Reach out and let's make it happen.</p>
+        <h2>Let's Connect</h2>
         <div class="social-icons">
             <a href="mailto:maruf.chats@gmail.com"><i class="fa-solid fa-envelope"></i></a>
             <a href="https://linkedin.com/in/exploremaruf"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/exploremaruf"><i class="fa-brands fa-github"></i></a>
+            <a href="https://fb.com/exploremaruf"><i class="fa-brands fa-facebook"></i></a>
         </div>
-        <p class="copyright">Built by Maruf Hasan © 2026</p>
+        <p class="copyright">✨ From <b>exploremaruf</b> with ❤️</p>
     </footer>
 
     <script src="script.js"></script>
