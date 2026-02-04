@@ -1,4 +1,14 @@
-// Typing Animation Logic
+// 1. Mobile Navigation Toggle
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+}
+
+// 2. Typing Animation Logic
 const textElement = document.getElementById("type-text");
 const phrases = ["Android Developer", "Java Enthusiast", "Django Learner", "Tech Explorer"];
 let phraseIndex = 0;
@@ -7,6 +17,8 @@ let isDeleting = false;
 let typeSpeed = 150;
 
 function type() {
+    if (!textElement) return; // Guard clause
+    
     const currentPhrase = phrases[phraseIndex];
     
     if (isDeleting) {
@@ -31,15 +43,23 @@ function type() {
     setTimeout(type, typeSpeed);
 }
 
-// Start Typing
-document.addEventListener("DOMContentLoaded", type);
-
-// Smooth Scroll
+// 3. Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            e.preventDefault();
+            // Close mobile menu if open
+            navLinks.classList.remove('active');
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
 });
+
+// Start Typing on Load
+document.addEventListener("DOMContentLoaded", type);

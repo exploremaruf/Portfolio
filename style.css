@@ -168,3 +168,27 @@ footer { padding: 60px 10%; text-align: center; background: #010409; }
     color: #fff;
     border-color: #fff;
 }
+
+/* --- MOBILE RESPONSIVENESS (ONLY ADDED THIS) --- */
+.nav-toggle { display: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+
+@media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(11, 15, 26, 0.95);
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 20px;
+        border-bottom: 1px solid var(--primary);
+    }
+    .nav-links.active { display: flex; }
+    h1 { font-size: 2.2rem; }
+    .hero { height: auto; padding: 120px 20px 60px; }
+    .hero-btns { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-secondary { width: 80%; text-align: center; }
+}
